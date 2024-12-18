@@ -48,3 +48,33 @@ Some Thoughts:
 4. **Results**
 5. **Discussion**
 
+
+
+## Meeting Notes -- Dec 18th:
+
+### Next Steps:
+
+--> Can we rewrite / write these texts towards different styles (masc/fem -- pos/neg agency)
+- We do this in a controlled experiment to add it to both the chosen vs rejected texts.
+  - How do we do this?
+    - Some dimensions are more continuous vs some of them have more opposites on the spectrum: `high-agency vs low-agency` -- `positive emotion vs negative emotion`
+    - EG: LIWC category about "leisure / work" -- there aren't really natural opposites. 
+    - Potentially prompt an LLM to translate between categories (provide it the dictionary of words to scrub / translate into?)
+      - How do we validate this?
+        - **idea** use the LIWCs to measure the effectivity of translation
+        - Need human-annotation to see if these changes affect the chosen/rejected texts.
+      - Does give better coverage if words are not in the dictionary.
+    - Things like readability and formality are easier to potentially translate between; as opposed to **topic** (like work/leisure).
+    - Maybe we focus on sentiment.
+  - Some mapping between RLHF supervised dataset instructions and the style categories.
+- https://arxiv.org/pdf/2410.06965 -- some baseline replication of figure 2 for example + extension?
+
+- Look at specific examples where there is a distinction between the *chosen* vs *rejected* texts. Look at the extrema of the computed samples
+
+- Split data to focus on domains that are more likely to have *style* based content --> `Chat` `Chat-Hard`.
+
+- Look at training data for more samples of *style* content + reward-scores without computation
+
+- Look at some more literature that does classifier based *style* detection / tagging. @zamborg look at this --> sentiment eg: Formality, ?Readibility?, (@zubin use GPT and find some resources to get tagging outside of lexica).
+
+- In January we should setup a regular update framework --> weekly update in slack on Wednesday! + Zubin <> Faeze checkin more regularly. 
